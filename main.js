@@ -27,3 +27,49 @@ function countDownRecursive(n){
     console.log(n)
     countDownRecursive(n - 1)
 }
+
+//https://www.codingame.com/playgrounds/5422/js-interview-prep-recursion
+
+
+
+//regular function
+
+function sumRange(n){
+    let total = 0
+    for (let i = 0; i <= n; i++){
+        total = total + i
+    }
+    return total
+}
+
+console.log(sumRange(3))
+
+//recursion function
+
+
+function sumRangeRecursive(n){
+    //return the sum of all numbers from 1 up to the number passed
+    if (n <= 0){
+       return n
+    }
+
+    return n + sumRangeRecursive(n - 1)
+}
+
+console.log(sumRangeRecursive(5));
+
+
+//regular loop
+function power(b, e){
+    for (let i = e; i >= 0; i--){
+        console.log(b**i)
+    }
+
+}
+power(2,4)
+
+//recursion style
+
+function powerRecursion(){
+    
+}
