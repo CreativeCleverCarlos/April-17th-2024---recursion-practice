@@ -73,3 +73,38 @@ power(2,4)
 function powerRecursion(){
     
 }
+
+
+
+function fib (num){
+    let n1 = 0;
+    let n2 = 1;
+    let nextTerm = 0
+    let array = []
+    for (let i = 0; i <= num; i++){
+       array.push(n1)
+       nextTerm = n1 + n2;
+       n1 = n2;
+       n2 = nextTerm  
+    }
+    return array
+}
+
+//i would of rathered this work all in one but i get the picture. it's weird coding
+
+console.log(fib(8))
+
+function fibRec(num){
+    if (num <=1){
+        return num;
+    }
+    return fibRec(num - 1) + fibRec(num - 2);
+}
+
+console.log(fibRec(10))
+
+num = 10
+
+for (let i = 0; i < num; i++){
+    console.log(fibRec(i))
+}
